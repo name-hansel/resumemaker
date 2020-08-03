@@ -1,0 +1,86 @@
+<html>
+<head>
+	<title>Choose Template</title>
+</head>
+<body vlink="#000000" link="black">
+	<header>
+		<a href="{{ url_for('home') }}" style="text-decoration: none">
+		<h1 align="center" class="mainheading">RESUME MAKER</h1>
+		</a>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home.css') }}">
+	</header>
+	<section class="text">
+		<style>
+			.text {
+				font-family: monospace;
+				font-size: 15px;
+			}
+			.row{
+				display: flex;
+				flex-wrap: wrap;
+				padding: 0 4px;
+			}
+		.column {
+			flex: 50%;
+			padding: 0 4px;
+			}
+
+		.column img {
+		  margin-top: 20px;
+		  vertical-align: middle;
+		  margin-left: 30px;
+		}
+		label {
+			font-family: monospace;
+		}
+		.wrapper {
+    		text-align: center;
+		}
+
+		.button {
+    		position: absolute;
+    		top: 50%;
+		}
+		</style>
+		<h2 align="center">{{msg}}</h2>
+		<h2 align="center" style="text-decoration: underline;padding-left: 10px;">Choose Template:<h2>
+	</section>
+	<br>
+	<form action = "{{ url_for('resume') }}" target="_blank"method = "POST">
+	<div class="row" align="center">
+  		<div class="column">
+  			<img src="{{url_for('static', filename='minimal.jpg')}}" alt="Minimal Template" style="border: 1px solid pink;">
+  			<img src="{{url_for('static', filename='simple - no line.jpg')}}" alt="Simple - No Line" style="border: 1px solid pink;">
+  		</div>
+  		<div class="column">
+  			<input type="radio" name="template" value="minimal">
+  			<label>Minimal Template</label>
+  			<input type="radio" name="template" value="simplenoline" style="margin-left: 260px;">
+  			<label>Simple - No Line Template</label>
+  		</div>
+  		<div class="column">
+  			<img src="{{url_for('static', filename='simple - no lines -  blue.jpg')}}" alt="Simple - No Line - Blue" style="border: 1px solid pink;">
+  			<img src="{{url_for('static', filename='simple - no lines - red.jpg')}}" alt="Simple - No Line - Red" style="border: 1px solid pink;">
+  			
+  		</div>
+  		<div class="column">
+  			<input type="radio" name="template" value="simpleblue">
+  			<label>Simple - No Line - Blue</label>
+  			<input type="radio" name="template" value="simplered" style="margin-left: 260px;">
+  			<label>Simple - With Line - Red</label>
+  		</div>
+  		<div class="column">
+  			
+  			<img src="{{url_for('static', filename='simple - with lines.png')}}" alt="Simple - With Lines" style="border: 1px solid pink;">
+  		</div>
+  		<div class="column">
+  			<input type="radio" name="template" value="simpleline">
+  			<label>Simple - With Lines</label>
+  		</div>
+  	</div>
+  	<br>
+  	<div class="wrapper">
+		<button type="submit">Generate Resume!</button>
+	</div>
+</body>
+</html>

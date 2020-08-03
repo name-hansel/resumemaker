@@ -1,0 +1,121 @@
+<html>
+<head>
+	<title>Resume Details</title>
+</head>
+<body vlink="#000000" link="black">
+	<header>
+		<a href="{{ url_for('home') }}" style="text-decoration: none">
+		<h1 align="center" class="mainheading">RESUME MAKER</h1>
+		</a>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home.css') }}">
+	</header>
+	<section class="text">
+		<h2>Enter the details to be included in the resume</h2>
+		<h3>Leave empty if unwanted</h3>
+		</section>
+	<form action = "{{ url_for('entereddata') }}" method = "POST" class="form">
+		<style>  
+			.text {
+				text-align: center;
+				font-family: monospace;
+				font-size: 20px;
+			}
+			.form {
+				font-family: monospace;
+				font-size: 30px;
+			}
+			.form input{
+				font-size: 20px;
+				font-family: monospace;
+			}
+			input[type=text],select {
+				border: none;
+				width:100%;
+				padding: 12px 20px;
+				margin:8px 0;
+				display: inline-block;
+				box-sizing: border-box;
+				border-bottom: 2px solid pink;
+			}
+			h3 {
+				font-size: 30px;
+				text-decoration: bold;
+				font-family: monospace;
+			}
+			textarea {
+				resize: none;
+				font-size: 20px;
+			}
+			input[type=submit]{
+				height: 50px;
+				width:100px;
+			}
+
+		</style>
+		<div style="padding-left: 50px;">
+		
+		<h3 style="text-decoration: underline;">Personal Details</h3>
+		<label>Name</label>
+		<input type = "text" name = "name" required>
+		<br><br>
+		<label>Address</label> 
+		<input type = "text" name = "address" required/>
+		<br><br>
+		<label>Mobile No.</label>
+		<input type = "text" name = "mobile" required/>
+		<br><br>
+		<label>Email Address</label>
+		<input type = "text" name = "email" required/><br>
+		
+		<h3 style="text-decoration: underline;">Objective</h3>
+		<input type = "text" name = "objective" required /><br>
+		<h3 style="text-decoration: underline;">Skills</h3>
+		<h5 style="margin-top: -20;">(Use ; to seperate)</h5>
+		<textarea rows="4" cols="30" name="skills" style="margin-top: -30;" required/>
+		</textarea>
+		<br><br>
+		<h3 style="text-decoration: underline;">Experience</h3>
+
+		<div style="width:100%display: table;">
+			<div style="display: table-row;">
+				<div style="width:300px;display: table-cell;">
+					<input type="text" name="exp1pos" placeholder="Position 1" required>
+					<input type="text" name="exp1duration" placeholder="Duration 1" required>
+					<textarea rows="5" cols="30" name="exp1desc" placeholder="Description 1 (use ; to seperate for list) "></textarea>
+				</div>
+				<div style="display: table-cell;width:300px;padding-left: 30px;">
+					<input type="text" name="exp2pos" placeholder="Position 2">
+					<input type="text" name="exp2duration" placeholder="Duration 2">
+					<textarea rows="5" cols="30" name="exp2desc" placeholder="Description 2 (use ; to seperate for list) "></textarea>
+				</div>
+				<div style="display: table-cell;width:300px;padding-left: 30px;">
+					<input type="text" name="exp3pos" placeholder="Position 3">
+					<input type="text" name="exp3duration" placeholder="Duration 3">
+					<textarea rows="5" cols="30" name="exp3desc" placeholder="Description 3 (use ; to seperate for list) "></textarea>
+				</div>
+			</div>
+		</div>
+
+		<br><br>
+		<h3 style="text-decoration: underline;">Education</h3>
+
+		<div style="width:100%display: table;">
+			<div style="display: table-row;">
+				<div style="width:300px;display: table-cell;">
+					<input type="text" name="ed1deg" placeholder="Degree 1" required>
+					<input type="text" name="ed1duration" placeholder="Duration 1" required>
+					<textarea rows="5" cols="30" name="ed1desc" placeholder="Description 1 (use ; to seperate for list)"></textarea>
+				</div>
+				<div style="display: table-cell;width:300px;padding-left: 30px;">
+					<input type="text" name="ed2deg" placeholder="Degree 2">
+					<input type="text" name="ed2duration" placeholder="Duration 2">
+					<textarea rows="5" cols="30" name="ed2desc" placeholder="Description 2 (use ; to seperate for list)"></textarea>
+				</div>
+			</div>
+		</div>
+		<br>
+		<input type = "submit" value = "Next" /><br>
+		</div>
+	</form>
+</body>
+</html>

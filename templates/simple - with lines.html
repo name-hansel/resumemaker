@@ -1,0 +1,112 @@
+<html>
+<head>
+	<title>Simple - With Lines</title>
+</head>
+<body>
+	<style>
+		h1 {
+			font-size:36px;
+		}
+		h4 {
+			padding-left: 30px;
+			font-size: 25px;
+			border-bottom: 1px solid #000;
+			line-height: 0.1em;
+			margin: 10px 0 20px;
+		}
+		h4 span {
+			background: #fff;
+			padding:0 10px;
+		}
+		p {
+			padding-left: 30px;
+		}
+		h3 {
+			padding-left: 40px;
+			margin-bottom: -10;
+		}
+		h2 {
+			padding-left: 40px;
+			margin-bottom: -10;
+			font-size:20px;
+		}
+		ul li {
+			padding-bottom: 10px;
+		}
+		p {
+			font-size:20px;
+			padding-left: 40px;
+		}
+	</style>
+	<header style="text-align: center;font-size: 14px;padding-top: 0px">
+		{{address}} * {{mobile}} * {{email}}
+ 	</header>
+ 	<h1 align="center">{{name}}</h1>
+ 	<h4><span>Objective</span></h4>
+ 	<p>{{objective}}</p>
+ 	<br>
+ 	<h4><span>Skills</span></h4>
+ 	<p>
+ 		<ul>
+ 			{% for name in skills %}
+  			<li> {{ name }}  </li>
+  			{% endfor %}
+ 		</ul>
+ 	</p>
+ 	<br>
+ 	<h4><span>Experience</span></h4>
+ 	<p>
+ 		<h2>{{exp1pos}}</h2>
+ 		<h3 style="float: right;margin-top: -15;padding-right: 40px;" >{{exp1duration}}</h3>
+ 		<h3>
+ 			<ul>
+ 				{% for name in exp1desc %}
+  				<li> {{ name }}  </li>
+  				{% endfor %}
+ 			</ul>
+ 		</h3>
+ 		<br>
+ 		<h2>{{exp2pos}}</h2>
+ 		<h3 style="float: right;margin-top: -15;padding-right: 40px;" >{{exp2duration}}</h3>
+ 		<h3>
+ 			<ul>
+ 				{% for name in exp2desc %}
+  				<li> {{ name }}  </li>
+  				{% endfor %}
+ 			</ul>
+ 		</h3>
+ 		<br>
+ 		<h2>{{exp3pos}}</h2>
+ 		<h3 style="float: right;margin-top: -15;padding-right: 40px;" >{{exp3duration}}</h3>
+ 		<h3>
+ 			<ul>
+ 				{% for name in exp3desc %}
+  				<li> {{ name }}  </li>
+  				{% endfor %}
+ 			</ul>
+ 		</h3>
+ 		<br>
+ 		<br><br>
+ 		<h4><span>Education</span></h4>
+ 		<h2>{{ed1deg}}</h2>
+ 		<h3 style="float: right;margin-top: -15;padding-right: 40px;" >{{ed1duration}}</h3>
+ 		<h3>
+ 			<ul>
+ 				{% for name in ed1desc %}
+  				<li> {{ name }}  </li>
+  				{% endfor %}
+ 			</ul>
+ 		</h3>
+ 		<br>
+ 		<h2>{{ed2deg}}</h2>
+ 		<h3 style="float: right;margin-top: -15;padding-right: 40px;" >{{ed2duration}} </h3>
+ 		<h3>
+ 			<ul>
+ 				{% for name in ed2desc %}
+  				<li> {{ name }}  </li>
+  				{% endfor %}
+ 			</ul>
+ 		</h3>
+ 	</p>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<html>
+<head>
+	<title>View Templates</title>
+</head>
+<body vlink="#000000" link="black">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home.css') }}">
+	<header>
+		<a href="{{ url_for('home') }}" style="text-decoration: none">
+		<h1 align="center" class="mainheading">RESUME MAKER</h1>
+		</a>
+	</header>
+	<style>
+		.row{
+				display: flex;
+				flex-wrap: wrap;
+				padding: 0 100px;
+			}
+
+/* Create two equal columns that sits next to each other */
+		.column {
+				  flex: 50%;
+				  padding: 0 100px;
+				}
+
+		.column img {
+		  margin-top: 20px;
+		  vertical-align: middle;
+		  margin-left: 30px;
+		}
+		label {
+			font-family: monospace;
+		}
+	</style>
+	<div class="row" align="center">
+  		<div class="column">
+  			<a href="{{ url_for('minimal') }}" style="text-decoration: none">
+  			<img src="{{url_for('static', filename='minimal.jpg')}}" alt="Minimal Template" style="border: 1px solid pink;">
+  			</a>
+
+  			<a href="{{ url_for('simplenoline') }}" style="text-decoration: none">
+  			<img src="{{url_for('static', filename='simple - no line.jpg')}}" alt="Simple - No Line" style="border: 1px solid pink;">
+  			</a>
+  		</div>
+  		<div class="column">
+  			<label style="margin-left:50px;">Minimal Template</label>
+  			<label style="margin-left:200px;">Simple - No Line Template</label>
+  		</div>
+  		<div class="column">
+  			<a href="{{ url_for('simplenolineblue') }}" style="text-decoration: none">
+  			<img src="{{url_for('static', filename='simple - no lines -  blue.jpg')}}" alt="Simple - No Line - Blue" style="border: 1px solid pink;">
+  			</a>
+
+			<a href="{{ url_for('simplenolinered') }}" style="text-decoration: none">
+  			<img src="{{url_for('static', filename='simple - no lines - red.jpg')}}" alt="Simple - No Line - Red" style="border: 1px solid pink;">
+  			</a>
+  		</div>
+  		<div class="column">
+  			<label style="margin-left:50px;">Simple - No Line - Blue</label>
+  			<label style="margin-left:200px;">Simple - With Line - Red</label>
+  		</div>
+  		<div class="column">
+  			<a href="{{ url_for('simpleline') }}" style="text-decoration: none">
+  			<img src="{{url_for('static', filename='simple - with lines.png')}}" alt="Simple - With Lines" style="border: 1px solid pink;">
+  			</a>
+  		</div>
+  		<div class="column">
+  			<label style="margin-left:20px;">Simple - With Lines</label>
+  		</div>
+  	</div>
+</body>
+</html>

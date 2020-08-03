@@ -1,0 +1,118 @@
+<html>
+<header>
+	<title>Simple - Lines - Red</title>
+</header>
+<style>
+	body {
+		font-family: Helvetica;
+		padding-left: 30px;
+	}
+	h1 {
+		color:#c4563d;
+	}
+	h2 {
+		color:#c4563d;	
+	}
+	h3 {
+		margin-bottom: -10px;
+		font-size:16px;
+	}
+	h4 {
+		font-size:12px;
+		margin-bottom: -10px;
+	}
+	hr {
+		color:#c4563d;
+		border-top: 2px solid;
+	}
+</style>
+<body>
+	<h1>{{name}}</h1>
+	<div>
+		<h3>{{address}}</h3>
+		<h3>{{mobile}}</h3>
+		<h3>{{email}}</h3>
+	</div>
+	<br>
+	<hr>
+	<h3>{{objective}}</h3>
+	<br>
+	<h2><b>EXPERIENCE</b></h2>
+	<hr style="margin-top: -10px;">
+	<div>
+		<div>
+			<h3>{{exp1pos}}</h3>
+			<h4>{{exp1duration}}</h4>
+			<h3>
+				<ul>
+ 					{% for name in exp1desc %}
+  					<li> {{ name }}  </li>
+  					{% endfor %}
+ 				</ul>
+			</h3>
+		</div>
+		<br>
+		<div>
+			<h3>{{exp2pos}}</h3>
+			<h4>{{exp2duration}}</h4>
+			<h3>
+				<ul>
+ 					{% for name in exp2desc %}
+  					<li> {{ name }}  </li>
+  					{% endfor %}
+ 				</ul>
+			</h3>
+		</div>	
+		<br>
+		<div>
+			<h3>{{exp3pos}}</h3>
+			<h4>{{exp3duration}}</h4>
+			<h3>
+				<ul>
+ 					{% for name in exp3desc %}
+  					<li> {{ name }}  </li>
+  					{% endfor %}
+ 				</ul>
+			</h3>
+		</div>
+		<br>
+	</div>
+	<h2><b>SKILLS</b></h2>
+	<hr style="margin-top: -10px;">
+	<div>
+		<ul>
+ 			{% for name in skills %}
+  			<li> {{ name }}  </li>
+  			{% endfor %}
+ 		</ul>
+	</div>
+	<h2><b>EDUCATION</b></h2>
+	<hr style="margin-top: -10px;">
+	<div>
+		<div>
+			<h3>{{ed1deg}}</h3>
+			<h4>{{ed1duration}}</h4>
+			<h3>
+				<ul>
+ 					{% for name in ed1desc %}
+  					<li> {{ name }}  </li>
+  					{% endfor %}
+ 				</ul>
+			</h3>
+		</div>
+		<br>
+		<div>
+			<h3>{{ed2deg}}</h3>
+			<h4>{{ed2duration}}</h4>
+			<h3>
+				<ul>
+ 					{% for name in ed1desc %}
+  					<li> {{ name }}  </li>
+  					{% endfor %}
+ 				</ul>
+			</h3>
+		</div>	
+		<br>
+	</div>
+</body>
+</html>

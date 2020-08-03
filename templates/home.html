@@ -1,0 +1,24 @@
+<html>
+<head>
+	<title>Resume Maker</title>
+</head>
+<body vlink="#000000" link="black">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home.css') }}">
+	<header>
+		<a href="{{ url_for('home') }}" style="text-decoration: none">
+		<h1 align="center" class="mainheading">RESUME MAKER</h1>
+		</a>
+	</header>
+	<div class="sidenav">
+		<a href="{{ url_for('about') }}" style="text-decoration: none">About</a>
+		<a href="{{ url_for('viewtemplates') }}" style="text-decoration: none">View Templates</a>
+	</div>
+	<div class="mainbody">
+		<h1 style="padding-top: 50px;"><a href="{{ url_for('form') }}" style="text-decoration: none;">Create a new resume</a></h1>
+	</div>
+	<footer class="footer">
+		<h4>OSTL MINI-PROJECT BY</h4>
+		<h4>SNEHAL MANE<br>DEVIKA NAIR<br>SNEHAL KAMBLE</h4>
+	</footer>
+</body>
+</html>

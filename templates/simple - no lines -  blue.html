@@ -1,0 +1,93 @@
+<html>
+<title>
+	Simple - No Lines - Color
+</title>
+<style>
+	h3 {
+		font-weight: bolder;
+	}
+	h4 {
+		color:#bcbcc4;
+	}
+	ul {
+		color:#bcbcc4;
+	}
+	ul li{
+		padding-bottom: 5px;
+	}
+</style>
+<body style="font-family:Trebuchet MS, sans-serif;;padding-top: 40px;padding-left: 60px;">
+	<h1 style="font-size: 50px;color:#0f0e73;">{{name}}</h1>
+	<p style="margin-top: -30px;color:#03c2fc;">{{address}} | {{mobile}} | {{email}}</p>
+	<div>
+		<h3 style="color:#7f7f85;font-size: 25px;">Objective</h3>
+		<p style="margin-top: -20px;color:#bcbcc4">{{objective}}</p>
+	</div>
+	<div>
+		<h3 style="color:#7f7f85;font-size: 25px;">Education</h3>
+		<div>
+			<h4 style="margin-top: -10px;font-size: 20px;color:#03c2fc;">{{ed1deg}}</h4>
+			<h4 style="margin-top: -10px;font-size: 15px;">{{ed1duration}}</h4>
+			<h4 style="margin-top: -10px;font-size: 15px;">
+				<ul>
+ 					{% for name in ed1desc %}
+  					<li> {{ name }}  </li>
+  					{% endfor %}
+ 				</ul>
+			</h4>
+		</div>
+		<br>
+		<div>
+			<h4 style="margin-top: -10px;font-size: 20px;color:#03c2fc;">{{ed2deg}}</h4>
+			<h4 style="margin-top: -10px;font-size: 15px;">{{ed2duration}}</h4>
+			<h4 style="margin-top: -10px;font-size: 15px;">
+				<ul>
+ 					{% for name in ed2desc %}
+  					<li> {{ name }}  </li>
+  					{% endfor %}
+ 				</ul>
+			</h4>
+		</div>
+	</div>
+	<div>
+		<h3 style="color:#7f7f85;font-size: 25px;">Experience</h3>
+		<div>
+			<h4 style="margin-top: -10px;font-size: 20px;color:#03c2fc;">{{exp1pos}}</h4>
+			<h4 style="margin-top: -10px;font-size: 15px;">{{exp1duration}}</h4>
+			<h4 style="margin-top: -10px;font-size: 15px;">{{exp1duration}}</h4>
+		</div>
+		<br>
+		<div>
+			<h4 style="margin-top: -10px;font-size: 20px;color:#03c2fc;">{{exp2pos}}</h4>
+			<h4 style="margin-top: -10px;font-size: 15px;">{{exp2duration}}</h4>
+			<h4 style="margin-top: -10px;font-size: 15px;">
+				<ul>
+ 					{% for name in exp2desc %}
+  					<li> {{ name }}  </li>
+  					{% endfor %}
+ 				</ul>
+			</h4>
+		</div>
+		<br>
+		<div>
+			<h4 style="margin-top: -10px;font-size: 20px;color:#03c2fc;">{{exp3pos}}</h4>
+			<h4 style="margin-top: -10px;font-size: 15px;">{{exp3duration}}</h4>
+			<h4 style="margin-top: -10px;font-size: 15px;">
+				<ul>
+ 					{% for name in exp3desc %}
+  					<li> {{ name }}  </li>
+  					{% endfor %}
+ 				</ul>
+			</h4>
+		</div>
+	</div>
+	<div>
+		<h3 style="color:#7f7f85;font-size: 25px;">Skills</h3>
+		<ul style="margin-left: -20px;margin-top: -10px;">
+			{% for name in skills %}
+  			<li type="square"> {{ name }}  </li>
+  			{% endfor %}
+		</ul>
+	</div>
+</body>
+</html>

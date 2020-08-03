@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Simple - No Lines</title>
+</head>
+<body style="font-family: Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', 'serif'">
+	<h1 align="center">{{name}}</h1>
+	<h5 align="center" style="margin-top: -15px;"><i>{{email}}</i></h5>
+<h5 style="margin-left: 20px;">{{address}}<br>{{mobile}}</h5>
+	<div>
+	  <h3 style="padding-left: 20px;"><b>OBJECTIVE</b></h3>
+		<h4 style="padding-left: 40px;">{{objective}}</h4>
+	</div>
+		<div>
+			<h3 style="padding-left: 20px;"><b>EDUCATION</b></h3>
+			<div style="padding-left: 40px;">
+				<div>
+					<h4><b>{{ed1deg}}</b></h4>
+					<h5 style="margin-top: -10px;">{{ed1duration}}</h5>
+					<h4 style="margin-top: -10px;">
+						<ul>
+ 							{% for name in ed1desc %}
+  							<li> {{ name }}  </li>
+  							{% endfor %}
+ 						</ul>
+					</h4>
+				</div>
+				<div>
+					<h4><b>{{ed2deg}}</b></h4>
+					<h5 style="margin-top: -10px;">{{ed2duration}}</h5>
+					<h4 style="margin-top: -10px;">
+						<ul>
+ 							{% for name in ed2desc %}
+  							<li> {{ name }}  </li>
+  							{% endfor %}
+ 						</ul>
+					</h4>
+				</div>
+			</div>
+	</div>
+	<div>
+		<h3 style="padding-left: 20px;"><b>SKILLS</b></h3>
+		<div style="padding-left: 40px;">
+			<ul>
+ 				{% for name in skills %}
+  				<li> {{ name }}  </li>
+  				{% endfor %}
+ 			</ul>
+		</div>
+	</div>
+	<div>
+		<h3 style="padding-left: 20px;"><b>EXPERIENCE</b></h3>
+		<div style="padding-left: 40px;">
+			<div>
+				<h4><b>{{exp1pos}}</b></h4>
+				<h5 style="margin-top: -10px;">{{exp1duration}}</h5>
+				<h4 style="margin-top: -10px;">
+				<ul>
+ 					{% for name in exp1desc %}
+  					<li> {{ name }}  </li>
+  					{% endfor %}
+ 				</ul>
+				</h4>
+			</div>
+			<div>
+				<h4><b>{{exp2pos}}</b></h4>
+				<h5 style="margin-top: -10px;">{{exp2duration}}</h5>
+				<h4 style="margin-top: -10px;">
+					<ul>
+ 						{% for name in exp2desc %}
+  						<li> {{ name }}  </li>
+  						{% endfor %}
+ 					</ul>
+				</h4>
+			</div>
+			<div>
+				<h4><b>{{exp3pos}}</b></h4>
+				<h5 style="margin-top: -10px;">{{exp3duration}}</h5>
+				<h4 style="margin-top: -10px;">
+					<ul>
+ 						{% for name in exp3desc %}
+  						<li> {{ name }}  </li>
+  						{% endfor %}
+ 					</ul>
+				</h4>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
